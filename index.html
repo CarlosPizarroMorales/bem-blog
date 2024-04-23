@@ -1,0 +1,91 @@
+<!-- 
+  En contenedor:
+  
+  1. display:flex // para declarar que usaremos flexbox en todos los hijos (items)
+  de este elemento.
+  2. flex-direction: row | column;
+  3. justify-content: space-between | space-around | space-evenly
+  4. align-items: stretch | center | end | start
+
+  - Por defecto el flex-direction es row
+-->
+
+<!-- 
+  En items:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <figure class="logo">
+      <img src="./assets/img/logo.svg" alt="" class="logo__img">
+      <span class="logo__title">EASY PEASY</span>
+    </figure>
+  </header>
+  
+  <hr>  
+  
+  <main class="main">
+    
+    <article class="article article__main article--vertical">
+      <img src="./assets/img/article-main.webp" alt="" class="article__img">
+      <div class="article__body">
+        <p class="article__title">ESTUFA</p>
+        <p class="article__description">Esta es una estufa muy cara</p>
+        <p class="article__price">$50.000</p>
+      </div>
+    </article>
+    
+    <section class="articles">
+      <article class="article  article--horizontal">
+        <img src="./assets/img/article-main.webp" alt="" class="article__img">
+        <div class="article__body">
+          <p class="article__title">ESTUFA</p>
+          <p class="article__description">Esta es una estufa muy cara</p>
+          <p class="article__price">$50.000</p>
+        </div>
+      </article>
+      <article class="article  article--horizontal">
+        <img src="./assets/img/article-main.webp" alt="" class="article__img">
+        <div class="article__body">
+          <p class="article__title">ESTUFA</p>
+          <p class="article__description">Esta es una estufa muy cara</p>
+          <p class="article__price">$50.000</p>
+        </div>
+      </article>
+      <article class="article  article--horizontal">
+        <img src="./assets/img/article-main.webp" alt="" class="article__img">
+        <div class="article__body">
+          <p class="article__title">ESTUFA</p>
+          <p class="article__description">Esta es una estufa muy cara</p>
+          <p class="article__price">$50.000</p>
+        </div>
+      </article>
+      
+    </section>
+  </main>
+  
+  <hr> 
+
+  <footer>
+    <figure class="logo">
+      <img src="./assets/img/logo.svg" alt="" class="logo__img">
+      <span class="logo__title">EASY PEASY</span>
+    </figure>
+  </footer>
+  
+</body>
+</html>
