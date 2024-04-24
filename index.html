@@ -1,18 +1,4 @@
-<!-- 
-  En contenedor:
-  
-  1. display:flex // para declarar que usaremos flexbox en todos los hijos (items)
-  de este elemento.
-  2. flex-direction: row | column;
-  3. justify-content: space-between | space-around | space-evenly
-  4. align-items: stretch | center | end | start
-
-  - Por defecto el flex-direction es row
--->
-
-<!-- 
-  En items:
--->
+<!-- VERSION CON BOOTSTRAP PARA EL LAYOUT -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,8 +8,16 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <!-- Se suprime la fuente Poppins en la versión Bootstrap -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> -->
+  <!--  Su suprime el linkeado a una hoja de estilos en la versión Bootstrap -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <!-- Se agrega el link al CDN para la hoja de estilos de Bootstrap -->
+  <!-- No agregaré el JS porque no utilizaré un menú y no hay elementos  -->
+  <!-- que requieran JS en este desafío -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <title>Document</title>
 </head>
 
@@ -83,45 +77,62 @@
   
   <hr class="ruler--middle">
 
-  <section class="sales">
+  <section class="sales container d-flex">
     <!-- ofertas bloque izquierdo catalogo -->    
-    <section class="sales__catalog">
-      <article class="product product--sale">
-        <img src="./assets/img/article-main.webp" alt="" class="product__img--sale">
-        <div class="product__body">
-          <p class="product__title--sale">ESTUFA</p>
-          <p class="product__description--sale">Esta es una estufa muy cara</p>
-          <p class="product__price--sale">$50.000</p>
-        </div>
-      </article>
-      <article class="product product--sale">
-        <img src="./assets/img/article-main.webp" alt="" class="product__img--sale">
-        <div class="product__body">
-          <p class="product__title--sale">ESTUFA</p>
-          <p class="product__description--sale">Esta es una estufa muy cara</p>
-          <p class="product__price--sale">$50.000</p>
-        </div>
-      </article>
-      <article class="product product--sale">
-        <img src="./assets/img/article-main.webp" alt="" class="product__img--sale">
-        <div class="product__body">
-          <p class="product__title--sale">ESTUFA</p>
-          <p class="product__description--sale">Esta es una estufa muy cara</p>
-          <p class="product__price--sale">$50.000</p>
-        </div>
-      </article>
-      <article class="product product--sale">
-        <img src="./assets/img/article-main.webp" alt="" class="product__img--sale">
-        <div class="product__body">
-          <p class="product__title--sale">ESTUFA</p>
-          <p class="product__description--sale">Esta es una estufa muy cara</p>
-          <p class="product__price--sale">$50.000</p>
-        </div>
-      </article>
-    </section>
+    <div class="col-8">
+      <section class="sales__catalog row row-cols-1 row-cols-md-2 g-4">
+        <article class="col product product__sale">
+          <div class="card">
+            <img src="./assets/img/article-main.webp" class="product__img--sale card-img-top" alt="...">
+            <div class="card-body product__body">
+              <h1 class="card-title product__title--sale fw-bold fs-3">Card title</h1>
+              <p class="card-text product__description--sale">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text product__price--sale fw-bold fs-2">$50.000</p>
+            </div>
+          </div>
+        </article>
+        <article class="col product product__sale">
+          <div class="card">
+            <img src="./assets/img/article-main.webp" class="product__img--sale card-img-top" alt="...">
+            <div class="card-body product__body">
+              <h1 class="card-title product__title--sale fw-bold fs-3">Card title</h1>
+              <p class="card-text product__description--sale">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text product__price--sale fw-bold fs-2">$50.000</p>
+            </div>
+          </div>
+        </article>
+        <article class="col product product__sale">
+          <div class="card">
+            <img src="./assets/img/article-main.webp" class="product__img--sale card-img-top" alt="...">
+            <div class="card-body product__body">
+              <h1 class="card-title product__title--sale fw-bold fs-3">Card title</h1>
+              <p class="card-text product__description--sale">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text product__price--sale fw-bold fs-2">$50.000</p>
+            </div>
+          </div>
+        </article>
+        <article class="col product product__sale">
+          <div class="card">
+            <img src="./assets/img/article-main.webp" class="product__img--sale card-img-top" alt="...">
+            <div class="card-body product__body">
+              <h1 class="card-title product__title--sale fw-bold fs-3">Card title</h1>
+              <p class="card-text product__description--sale">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text product__price--sale fw-bold fs-2">$50.000</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
     <!-- ofertas bloque derecho categorias -->
-    <section class="sales__categories">
-      <article class="category">
+    <section class="sales__categories col-4 d-flex flex-column ps-5">
+      <p class="category category--electronics"><span class="category__title badge d-flex align-items-center justify-content-around text-dark fw-medium fs-2 bg-primary"><img src="./assets/img/logo.svg" class="category__img w-25" alt="">ELECTRONICA</span></p>
+      <p class="category category--electronics"><span class="category__title badge d-flex align-items-center justify-content-around text-dark fw-medium fs-2 bg-danger"><img src="./assets/img/logo.svg" class="category__img w-25" alt="">ELECTRONICA</span></p>
+      <p class="category category--electronics"><span class="category__title badge d-flex align-items-center justify-content-around text-dark fw-medium fs-2 bg-warning"><img src="./assets/img/logo.svg" class="category__img w-25" alt="">ELECTRONICA</span></p>
+      <p class="category category--electronics"><span class="category__title badge d-flex align-items-center justify-content-around text-dark fw-medium fs-2 bg-success"><img src="./assets/img/logo.svg" class="category__img w-25" alt="">ELECTRONICA</span></p>
+      <p class="category category--electronics"><span class="category__title badge d-flex align-items-center justify-content-around text-dark fw-medium fs-2 bg-info"><img src="./assets/img/logo.svg" class="category__img w-25" alt="">ELECTRONICA</span></p>
+      <p class="category category--electronics"><span class="category__title badge d-flex align-items-center justify-content-around text-dark fw-medium fs-2 bg-secondary"><img src="./assets/img/logo.svg" class="category__img w-25" alt="">ELECTRONICA</span></p>
+      
+      <!-- <article class="category">
         <img src="./assets/img/logo.svg" alt="" class="category__img category--electronics">
         <span class="category__title">ELECTRONICA</span>
       </article>
@@ -144,8 +155,9 @@
       <article class="category">
         <img src="./assets/img/logo.svg" alt="" class="category__img category--electronics">
         <span class="category__title">DORMITORIO</span>
-      </article>
+      </article> -->
     </section>
+
   </section>
   
   <hr> 
